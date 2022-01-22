@@ -30,18 +30,15 @@ public class Player : MonoBehaviour {
 
 			if (Input.GetKeyDown(KeyCode.Space)){
 				Debug.Log("jumpPressed");
-				moveHeight = Mathf.Sqrt(jumpPower* -3.0f *gravity);
+				moveHeight = Mathf.Sqrt(jumpPower* -2.0f *gravity);
 			}
 
 			if(controller.isGrounded){
 				Vector3 movement = new Vector3(moveHorizontal, moveHeight, moveVertical);
 				moveDirection = movement;
 			}
-
-			
-			
-//			transform.Rotate(0, turn * turnSpeed * Time.deltaTime, 0);
+		//transform.Rotate(0, turn * turnSpeed * Time.deltaTime, 0);
 			controller.Move(moveDirection * speed * Time.deltaTime);
-			moveDirection.y -= gravity * Time.deltaTime;
+			//moveDirection.y -= gravity * Time.deltaTime;
 		}
 }

@@ -33,7 +33,12 @@ public class ThirdPersonCamera : MonoBehaviour
     {
         Vector3 dir = new Vector3(0, 0, -distance);
         Quaternion rotation = Quaternion.Euler(currentY, currentX, 0);
+        Vector3 relativePos = lookAt.transform.position - camTransform.transform.position;
+        Quaternion rotate = Quaternion.LookRotation(relativePos);
         camTransform.position = lookAt.position + rotation * dir;
-        camTransform.LookAt(lookAt.position);
+        transform.rotation = Quaternion.Slerp(camTransform.rotation,rotation,0.1f);
+        //To-do
+        //trying to make camera follow the player.
+        camTransform.LookAt(lookAt.transform);
     }
 }
