@@ -7,6 +7,7 @@ public class PS : MonoBehaviour
     private CharacterController cc;// CharacterControllerを使うための変数
     private Vector3 velocity;// CharacterControllerに重力をかけるための変数
     private bool ToolSpawned = false;
+    // private ItemData CollectedItem;
 
     public float jumpPower = 8;// ジャンプ力
     public float moveSpeed = 10;// 移動スピード
@@ -30,6 +31,7 @@ public class PS : MonoBehaviour
     public GameObject ASIBA;
     public GameObject ASIBA2;
     public GameObject Arm_2_Right_end;
+
 
     void Start()
     {
@@ -95,8 +97,6 @@ public class PS : MonoBehaviour
         {
             StartCoroutine(ASIBA2SpawendCO());
         }
-        
-        
     }
     IEnumerator PickaxeSpawendCo()
     {
@@ -134,20 +134,14 @@ public class PS : MonoBehaviour
         yield return new WaitForSeconds(1);
         Destroy(ASIBA2s.gameObject, 5);
     }
-
-
-
-    // void OnCollisionStay(Collision hit)
+    
+    // void OnCollisionEnter(Collision other) 
     // {
-    //     if(hit.gameObject.tag=="Rock")
+    //     if(other.gameObject.tag == "Collectable")
     //     {
-    //         Debug.Log("Touching rock");
-    //         if(Input.GetMouseButtonUp(1))
-    //         {
-    //             Debug.Log("Touching rock and right clicked");
-    //             GameObject obj = GameObject.Find("Rock.1");
-    //             Destroy(obj);
-    //         }
+    //         CollectedItem = other.GetComponent<ItemData>();
     //     }
     // }
+    
+
 }

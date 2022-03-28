@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1550739518516658
+--- !u!1 &7602441820909041025
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,46 +8,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4471497275571382}
-  - component: {fileID: 33324633949742726}
-  - component: {fileID: 23919564543805012}
-  - component: {fileID: 64966537296436052}
+  - component: {fileID: 7605051039465129091}
+  - component: {fileID: 7633697046832100427}
+  - component: {fileID: 7626455646931506477}
+  - component: {fileID: 1498282637833484683}
+  - component: {fileID: 4858261183253122661}
   m_Layer: 0
-  m_Name: Bush_2 Winter
-  m_TagString: Untagged
+  m_Name: Wood
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4471497275571382
+--- !u!4 &7605051039465129091
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1550739518516658}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_GameObject: {fileID: 7602441820909041025}
+  m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
+  m_LocalPosition: {x: 0.69, y: -2719.2139, z: -13.064}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &33324633949742726
+  m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
+--- !u!33 &7633697046832100427
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1550739518516658}
-  m_Mesh: {fileID: 4300000, guid: 1b7d711ce9bb24af5bd4e6c110cfe96e, type: 3}
---- !u!23 &23919564543805012
+  m_GameObject: {fileID: 7602441820909041025}
+  m_Mesh: {fileID: 4300000, guid: 95b4d776c43d6488585eb608a8c6ea86, type: 3}
+--- !u!23 &7626455646931506477
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1550739518516658}
+  m_GameObject: {fileID: 7602441820909041025}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -60,8 +61,8 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 78eb8e078959bb647a61596ca692eeaf, type: 2}
-  - {fileID: 2100000, guid: 78eb8e078959bb647a61596ca692eeaf, type: 2}
+  - {fileID: 2100000, guid: e2c9aec4937c6f84db1ab41bd8b7cf75, type: 2}
+  - {fileID: 2100000, guid: e2c9aec4937c6f84db1ab41bd8b7cf75, type: 2}
   - {fileID: 2100000, guid: 78eb8e078959bb647a61596ca692eeaf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -84,17 +85,33 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &64966537296436052
-MeshCollider:
+--- !u!54 &1498282637833484683
+Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1550739518516658}
+  m_GameObject: {fileID: 7602441820909041025}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!136 &4858261183253122661
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7602441820909041025}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 1b7d711ce9bb24af5bd4e6c110cfe96e, type: 3}
+  m_Radius: 1.8074325
+  m_Height: 6.8585215
+  m_Direction: 1
+  m_Center: {x: 0.18744437, y: 3.264048, z: -0.29996052}

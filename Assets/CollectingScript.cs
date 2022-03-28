@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PickaxeScript : MonoBehaviour
-{   
-    public GameObject Player;
+public class CollectingScript : MonoBehaviour
+{
+    public OwnInventory owninventory;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,12 +16,12 @@ public class PickaxeScript : MonoBehaviour
     {
         
     }
-    
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other) 
     {
-        if(other.gameObject.tag == "Rock")
+        if(other.tag == "Collectable")
         {
-            
+            owninventory.AddItemFromName(other.name, 1);
+            Destroy(other.gameObject);
         }
     }
 }
